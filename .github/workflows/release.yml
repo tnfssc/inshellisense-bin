@@ -30,8 +30,11 @@ jobs:
         run: |
           pnpm run build
 
-      - name: Upload binary
-        uses: actions/upload-artifact@v3
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          name: inshellisense
-          path: bin/
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: bin/*
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
