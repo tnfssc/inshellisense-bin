@@ -1,0 +1,18 @@
+{
+  "name": "inshellisense-bin",
+  "version": "1.0.0",
+  "private": "true",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "vite-node src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0"
+  },
+  "dependencies": {
+    "caxa": "^3.0.1",
+    "extract-zip": "^2.0.1",
+    "vite-node": "^0.34.6"
+  }
+}
